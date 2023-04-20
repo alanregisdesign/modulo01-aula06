@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Abel', sans-serif;
+}
+
+/* Caixa do menu do cabeçalho. */
+header{
+    width: 100%;
+    background-color: darkred;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+
+header nav ul{
+    display: flex;
+    gap: 32px;
+}
+
+header nav ul li{
+    position: relative;
+}
+
+/* Botões do menu do cabeçalho, menos o login. */
+header nav ul li a{
+    display: block;
+    line-height: 46px;
+    color: white;
+    margin: 10px 0;
+    transition-duration: 300ms;
+}
+
+/* Botão de login */
+header nav ul li a.btn{
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0 20px;
+    transition-duration: 300ms;
+}
+
+/* Botões do menu do cabeçalho quando o mouse passa em cima. */
+header nav ul li a:hover{
+    color:burlywood;
+}
+
+/* Botão de login quando o mouse passa em cima. */
+header nav ul li a.btn:hover{
+    color: darkred;
+    background-color: white;
+}
+
+/* Items do dropdown menu do cabeçalho */
+header nav ul ul{
+    position: absolute;
+    background-color: darkred;
+    display: initial;
+    padding: 0 16px;
+    border-radius: 0 0 5px 5px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-42%);
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 300ms;
+}
+
+header nav ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+}
